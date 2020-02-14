@@ -1,6 +1,14 @@
-.headline {
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
-    font-size: large;
-}
+.container-fluid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    }
+    
+    .header { 
+        display: block;
+        grid-area: 1 / 1 / 2 / 6;
+        border: 1px solid red;
+    }
+   
