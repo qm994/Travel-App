@@ -1,3 +1,10 @@
+.body {
+    border: 1px dotted darkblue;
+    margin: -5px;
+    height: 100vh;
+    width: 100vw;
+}
+
 .container-fluid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -6,9 +13,8 @@
     grid-row-gap: 0px;
     }
     
-    .header { 
-        display: block;
-        grid-area: 1 / 1 / 2 / 6;
-        border: 1px solid red;
-    }
-   
+.header { 
+    display: block;
+    grid-area: 1 / 1 / 2 / 6;
+    border: 1px solid red;
+}
