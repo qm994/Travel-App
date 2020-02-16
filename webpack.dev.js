@@ -14,8 +14,10 @@ module.exports = {
     stats: 'verbose',
     output: {
         filename: "main.js",
-        path: __dirname + "/dist"
+        path: path.resolve(__dirname, "dist")
     },
+    devtool: 'source-map',
+    stats: 'verbose',
     mode: "development",
     // this babel_loader means afterwe build the dependency tree,
     // we will find all the files end in .js and exclude the directory node_modules
@@ -23,9 +25,16 @@ module.exports = {
     module: {
         rules: [
             {
-                test: "/\.js$/",
+                test: '/\.js$/',
                 exclude: /node_modules/,
-                loader: "babel_loader"
+                loader: "babel-loader"
+            },
+
+            {// use the all these loaders apply to the files ended as .scss/css
+                test: /\.scss$/,
+                // all these loaders are chained together;
+                // And the chained loader runs from RIGHT TO LEFT 
+                use: [ 'style-loader', 'css-loader', 'sass-loader' ]
             }
         ]
     },  
