@@ -524,10 +524,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
-console.log(_js_addTrip__WEBPACK_IMPORTED_MODULE_0__["openForm"])
-
-alert("the entry point is running!!!!")
+console.log(_js_addTrip__WEBPACK_IMPORTED_MODULE_0__["openForm"]);
+alert("the entry point is running!!!!");
 
 /***/ }),
 
@@ -542,11 +540,10 @@ alert("the entry point is running!!!!")
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "openForm", function() { return openForm; });
 function openForm() {
-    //document.getElementById("myForm").style.display = "block";
-    alert("function successfully called!!!!");
+  document.getElementById("myForm").style.display = "block";
+  alert("function successfully called!!!!");
 }
 
- 
 
 
 /***/ }),
