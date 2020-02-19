@@ -1,6 +1,6 @@
 function openForm() {
-    document.getElementById("myForm").style.display = "block";
-    alert("function successfully called!!!!");
+    let openButton = document.getElementById("open-button");
+    openButton.addEventListener("click", function(){document.getElementById("myForm").style.display = "block"});
 }
 
-export { openForm } 
+export { openForm };
