@@ -1,7 +1,7 @@
 const path = require("path");
 const webpack = require('webpack');
-const HtmlWebPackPlugin = require("html-webpack-plugin")
-const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const HtmlWebPackPlugin = require("html-webpack-plugin");
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 //Most of the plugins need to be required at the top of config file
 // Then add plugin to the module.exports
@@ -13,6 +13,8 @@ module.exports = {
     entry: './src/client/index.js',
     stats: 'verbose',
     output: {
+        libraryTarget: "var",
+        library:"Client",
         filename: "index.js",
         path: path.resolve(__dirname, "dist")
     },
@@ -25,7 +27,7 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.js$/,
+                test: /\.js$/ ,
                 exclude: /node_modules/,
                 loader: "babel-loader"
             },

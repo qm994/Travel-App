@@ -1,20 +1,19 @@
-.body {
-    border: 1px dotted darkblue;
-    margin: -5px;
-    height: 100vh;
-    width: 100vw;
-}
 
 .container-fluid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(5, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-    }
+    grid-column-gap: 2px;
+    grid-row-gap: 2px;
+    grid-template-areas: "header header saved saved saved"
+                         "nav main main main main"
+                         "nav main main main main"
+                         "nav main main main main"
+                         "nav main main main main";
+    }   
     
 .header { 
     display: block;
-    grid-area: 1 / 1 / 2 / 6;
+    grid-area: header;
     border: 1px solid red;
 }
