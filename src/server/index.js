@@ -25,3 +25,13 @@ app.get('/', function (req, res) {
 app.listen(3030, function () {
     console.log('Example app listening on port 3030!');
 });
+
+
+//
+// 1. Set up the route for `Geonames` API
+//
+
+var geoNamesData  = {};
+app.get("/coordData", function(req, res){
+    
+})

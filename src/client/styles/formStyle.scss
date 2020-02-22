@@ -3,11 +3,13 @@
 .form-popup{
     display: none;
     grid-area: main;
-    position:fixed;
+    position: relative;
+    z-index: 99 !important;
     box-sizing: border-box;
     border: 1px solid green;
     /* width&height set the width&height of the content area inside a box */
-    width: calc(100% - 40px);
+    // width: calc(100% - 10px);
+    //width: calc(100% - 20px);
     top: 50%;
     bottom: 50%;
 }
