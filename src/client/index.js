@@ -1,4 +1,11 @@
+import{ openForm } from "./js/addTrip";
+import "./styles/style.scss";
+import "./styles/formStyle.scss";
 
 
-// import the all js fuctions and scss styles over here
-// Also export the js functions
+alert("the entry point is running!!!!");
+
+// export to the client library
+export {
+    openForm
+};

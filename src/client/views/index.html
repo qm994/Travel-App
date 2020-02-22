@@ -2,51 +2,55 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Weather Journal</title>
-<link href="https://fonts.googleapis.com/css?family=Oswald:400,600,700|Ranga:400,700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../styles/style.css">
-<link rel="stylesheet" href="../styles/formStyle.css">
+<title>Travel App</title>
 </head>
+
  <body>
-<div id = "app">
 
-  <div class ="holder headline">
-    Travel Planner
-  </div>
+      <div class="container-fluid">
+        <!--           -->
+        <!-- 1. HEADER -->
+        <!--           -->
+        <div class="header">
+          <header class="page_header">
+            <h1>Travel App</h1>
+            <nav class="navbar_menu">
+              <ul id="navbar_list"></ul>
+            </nav>
+            <button type="button" id="open-button" onclick="Client.openForm();">+ Add New Trip</button>
+            <button type="button" id="edit-button">+ Edit Trip</button>
+            <button type="button" id="remove-button">+ Remove Trips</button>
+          </header>
+       </div>
 
-  <button type="button" class="open-button" onclick="openForm()">+ Add New Trip</button>
-  <div class="form-popup" id="myForm">
-    <form class="form-container">
-      <label for="firstName">First Name</label>
-      <input type="text" id="firstName">
+       <!--           -->
+       <!-- 2. NAVBAR   -->
+       <!--           -->
+       <div class="nav">
+        
+       </div>
+       
+        <!--           -->
+        <!-- 3. MAIN   -->
+        <!--           -->
+        <div class="main">
+          <!-- popup form when add new trip-->
+          <div class="form-popup" id="myForm">
+            <form class="form-container">
+              <label for="firstName">First Name</label>
+              <input type="text" id="firstName">
+      
+              <label for="lastName">Last Name</label>
+              <input type="text" id="lastName">
+      
+              <button type="submit" class="btn">Submit</button>
+              <button type="button" class="btn cancel">Cancel</button>
+            </form>
+          </div>
+        </div>
+        
 
-      <label for="lastName">Last Name</label>
-      <input type="text" id="lastName">
-
-      <button type="submit" class="btn">Submit</button>
-      <button type="button" class="btn cancel" onclick="closeForm()"></button>
-    </form>
-  </div>
-
-  <!-- <div class ="holder zip">
-    <label for="zip">Enter Zipcode here</label>
-    <input type="text" id="zip" placeholder="enter zip code here">
-  </div>
-  <div class ="holder feel">
-    <label for="feelings">How are you feeling today?</label>
-    <textarea class= "myInput" id="feelings" placeholder="Enter your feelings here" rows="9" cols="50"></textarea>
-    <button id="generate" type = "submit"> Generate </button>
-  </div>
-  <div class ="holder entry">
-    <div class = "title">Most Recent Entry</div>
-   <div id = "entryHolder">
-    <div id = "date"></div> 
-   <div id = "temp"></div>
-   <div id = "content"></div>
-  </div>
-  </div> -->
-</div>
-<script src="../js/addTrip.js" type="text/javascript"></script>
+    </div>
 
 </body>
 </html>

@@ -1,0 +1,29 @@
+/* add new trip form hided as default */
+
+.form-popup{
+    display: none;
+    grid-area: main;
+    position: relative;
+    z-index: 99 !important;
+    box-sizing: border-box;
+    border: 1px solid green;
+    /* width&height set the width&height of the content area inside a box */
+    // width: calc(100% - 10px);
+    //width: calc(100% - 20px);
+    top: 50%;
+    bottom: 50%;
+}
+
+.form-container {
+    background-color: white;
+    border: 1px solid red;
+    margin: 20px
+  }
+
+.form-container {
+  input[type=text] {
+    width: calc(100% - 1em);
+  }
+}
+
+
