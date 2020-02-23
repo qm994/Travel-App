@@ -2,7 +2,7 @@ async function getCoordinatesData(city) {
     //let cityVal  = document.getElementById("cityName").value;
     const baseURL = "http://api.geonames.org/searchJSON?q=";
     const userName = "ma791778711";
-    console.log(`${baseURL}${city}&username=${userName}&maxRows=1`);
+    
     let response = await fetch(`${baseURL}${city}&username=${userName}&maxRows=10`);
     let data = await response.json();
     const lng = data.geonames[0].lng;
@@ -11,3 +11,17 @@ async function getCoordinatesData(city) {
 }
 
 module.exports = {getCoordinatesData};
+
+async function getWeatherData(coords = []){
+    const baseURL = "https://api.darksky.net/forecast/";
+    const key = "a1a23e327c352a8dcfb8a6078531a738";
+    let response = await fetch(`${baseURL}${key}/${coords}`);
+    try {
+        const data = await response.json();
+        const [temperature, humidity, pressure] = [data.currently.apparentTemperature, data.currently.humidity, data.currently.pressure];
+        return [temperature, humidity, pressure];
+        
+    } catch(error){
+        alert(`dark sky api error is ${error}`)
+    }
+}
