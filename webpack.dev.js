@@ -9,8 +9,8 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 
 module.exports = {
-
-    entry: './src/client/index.js',
+    // babel-polyfill always needed when use the async function at the top of layer;
+    entry: ['babel-polyfill', './src/client/index.js'],
     stats: 'verbose',
     output: {
         libraryTarget: "var",

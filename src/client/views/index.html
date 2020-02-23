@@ -35,15 +35,19 @@
         <!--           -->
         <div class="main">
           <!-- popup form when add new trip-->
+          
           <div class="form-popup" id="myForm">
             <form class="form-container">
-              <label for="firstName">First Name</label>
-              <input type="text" id="firstName">
+              <label for="countryName">Country</label>
+              <input type="text" id="countryName">
       
-              <label for="lastName">Last Name</label>
-              <input type="text" id="lastName">
-      
-              <button type="submit" class="btn">Submit</button>
+              <label for="cityName">City</label>
+              <input type="text" id="cityName">
+
+              <label for="postCode">Post Code(Zip Code)</label>
+              <input type="text" id="postCode">
+              <!-- submit button type will cause the page reload-->
+              <button type="button" id="submitForm">Submit</button>
               <button type="button" class="btn cancel">Cancel</button>
             </form>
           </div>
