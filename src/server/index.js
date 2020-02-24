@@ -1,6 +1,11 @@
 const express = require("express");
-
+const request = require("request");
 const app = express();
+
+app.use((req, res, next) => {
+    res.header('Access-Control-Allow-Origin', '*');
+    next();
+  });
 const bodyParser = require("body-parser");
 
 /* Middleware*/
@@ -11,6 +16,11 @@ app.use(bodyParser.json());
 // Cors for cross origin allowance
 const cors = require("cors");
 app.use(cors());
+// app.use((req, res, next) => {
+//     res.header('Access-Control-Allow-Origin', '*');
+//     res.header('Access-Control-Allow-Headers', "*");
+//     next();
+//   });
 
 app.use(express.static('dist'));
 console.log(__dirname);

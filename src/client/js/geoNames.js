@@ -10,8 +10,6 @@ async function getCoordinatesData(city) {
     return {"longtitude": lng, "latitude": lat};
 }
 
-module.exports = {getCoordinatesData};
-
 async function getWeatherData(coords = []){
     const baseURL = "https://api.darksky.net/forecast/";
     const key = "a1a23e327c352a8dcfb8a6078531a738";
@@ -25,3 +23,8 @@ async function getWeatherData(coords = []){
         alert(`dark sky api error is ${error}`)
     }
 }
+
+module.exports = {
+    getCoordinatesData,
+    getWeatherData
+};
