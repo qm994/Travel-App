@@ -13,11 +13,20 @@ document.getElementById("submitForm").addEventListener("click",
         let zipCode = document.getElementById("postCode").value;
         console.log(zipCode);
         tools.getCoordinatesData(cityVal).then(
+            val => {console.log(val)}
+            );
+
+        // tools.postGenonamesData('http://localhost:3030/geoNames',coordsVal).then(
+        //             val => {console.log(val)}
+        //         )
+        //console.log(geonames);
+        tools.getWeatherData("http://localhost:3030/geoNames").then(
             value => {console.log(value)},
-            reason => {console.log(reason)}
-        );
-        
-    })
+            message => {console.log(`The eror is ${message}`)}
+        )
+    });
+
+
 
 //alert("the entry point is running!!!!");
 
