@@ -15,6 +15,7 @@ async function getWeatherData(url){
     // const key = "a1a23e327c352a8dcfb8a6078531a738";
     let response = await fetch(url);
     try {
+        //console.log(response);
         const data = await response.json();
         // const [temperature, humidity, pressure] = [data.currently.apparentTemperature, data.currently.humidity, data.currently.pressure];
         // return [temperature, humidity, pressure];

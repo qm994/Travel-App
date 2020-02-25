@@ -16,9 +16,10 @@ document.getElementById("submitForm").addEventListener("click",
             value => {console.log(value)},
             reason => {console.log(reason)}
         );
-        let weatherData = tools.getWeatherData("http://localhost:8080/geoNames/");
-        console.log(weatherData);
-        console.log(weatherData.then(value => console.log(value)));
+        tools.getWeatherData("http://localhost:3030/geoNames").then(
+            value => {console.log(value)},
+            message => {console.log(`The eror is ${message}`)}
+        )
     });
 
 //alert("the entry point is running!!!!");
