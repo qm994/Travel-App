@@ -7,7 +7,7 @@ async function getCoordinatesData(city) {
     let data = await response.json();
     const lng = data.geonames[0].lng;
     const lat = data.geonames[0].lat;
-    return {"longtitude": lng, "latitude": lat};
+    return [lng, lat];
 }
 
 async function getWeatherData(url){
@@ -27,7 +27,21 @@ async function getWeatherData(url){
     }
 }
 
+postGenonamesData = async (url, data) => {
+    const response = await fetch(url, {
+        method: "POST",
+        credentials: "same-origin",
+        headers:{
+            "Content-Type": "text/plain"
+        },
+        body: JSON.stringify(data)
+    })
+
+    return await response.json();
+};
+
 module.exports = {
     getCoordinatesData,
-    getWeatherData
+    getWeatherData,
+    postGenonamesData
 };

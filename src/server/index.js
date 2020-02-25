@@ -19,6 +19,12 @@ app.use(cors());
 app.use(express.static('dist'));
 console.log(__dirname);
 
+
+app.post("/geoNames", function(req, res){
+    let data = req.body;
+    res.send(data);
+})
+
 app.get("/geoNames", function(req, res){
     request("https://api.darksky.net/forecast/a1a23e327c352a8dcfb8a6078531a738/42.3601,-71.0589",
         function(error, response, body){
@@ -30,6 +36,7 @@ app.get("/geoNames", function(req, res){
             }
         });
     });
+
 
 /* this means we use the index.html in dist as the view
 rather than the view in src folder */
