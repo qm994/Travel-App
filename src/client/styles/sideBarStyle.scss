@@ -1,0 +1,13 @@
+.nav{
+    display: flex;
+    grid-area: nav;
+    border: 1px solid red;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+// .nav {
+//     display: block;
+//     grid-area: nav;
+//     border: 1px solid red;
+// }
