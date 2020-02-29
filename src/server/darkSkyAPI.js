@@ -13,7 +13,9 @@ async function getWeather(lng, lat, departTime, currentTime){
 
         try{
             const result = await res.json();
-            const weatherSummary = "Your departure date is more than a week from current time!";
+            const weatherSummary = `Your departure date is more than a week from current time,
+             and the weather condition is ${result.currently.summary}`;
+
             let temperature = result.currently.temperature;
             return [weatherSummary, temperature]
 
@@ -24,7 +26,8 @@ async function getWeather(lng, lat, departTime, currentTime){
         const res = await fetch(`${baseURL}${apiKey}/${lat},${lng}`);
         try{
             const result = await res.json();
-            const weatherSummary = "Your departure date is within a week!";
+            const weatherSummary = `Your departure date is within a week, and 
+            the weather condition is ${result.currently.summary}`;
             let temperature = result.currently.temperature;
             return [weatherSummary, temperature]
 

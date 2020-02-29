@@ -63,10 +63,33 @@ app.post("/coords", async function(req, res){
             departureTime: departureTime,
             travelSummary: travelSummary,
             cityTemp: cityTemp,
-            durationDays: durationDays
+            durationDays: durationDays,
+            decideFuture: decideFuture
         };
-        console.log(allAPIData);
+        //console.log(allAPIData);
+        res.send({
+            imageURL: imageURL,
+            cityName: inputCityName,
+            departureTime: departureTime,
+            travelSummary: travelSummary,
+            cityTemp: cityTemp,
+            durationDays: durationDays,
+            decideFuture: decideFuture
+        });
     });
+});
+
+app.get("/apiData", function(req, res){
+    console.log('/apiData endpoint is running!!!!');
+    res.send({
+        imageURL: imageURL,
+        cityName: inputCityName,
+        departureTime: departureTime,
+        travelSummary: travelSummary,
+        cityTemp: cityTemp,
+        durationDays: durationDays,
+        decideFuture: decideFuture
+    })
 });
 
 // designates what port the app will listen to for incoming requests
