@@ -13,7 +13,7 @@ async function getWeather(lng, lat, departTime, currentTime){
 
         try{
             const result = await res.json();
-            const weatherSummary = "Your departure date is more than a week!";
+            const weatherSummary = "Your departure date is more than a week from current time!";
             let temperature = result.currently.temperature;
             return [weatherSummary, temperature]
 
