@@ -15,6 +15,7 @@ app.use(express.static('dist'));
 // All the api functions 
 let getCoordinates = require("./geoNamesAPI");
 let getWeather = require("./darkSkyAPI");
+let getImage = require("./pixabayAPI");
 
 /* this means we use the index.html in dist as the view
 rather than the view in src folder */
@@ -28,6 +29,12 @@ var userCurrentTime;
 var departureTime;
 var durationDays;
 var decideFuture;
+
+var travelSummary;
+var cityTemp;
+var imageURL;
+
+var allAPIData = {};
 app.post("/coords", async function(req, res){
     inputCityName = req.body.city;
     userCurrentTime = req.body.userCurrentTime;
@@ -42,7 +49,24 @@ app.post("/coords", async function(req, res){
     // ${decideFuture}`);
     getCoordinates(inputCityName)
     .then(value => getWeather(value[0], value[1], departureTime, userCurrentTime))
-    .then(value => console.log(value));
+    .then(value => {
+        travelSummary = value[0];
+        cityTemp = value[1];
+        //console.log(travelSummary, cityTemp);
+    })
+    .then(value => getImage(inputCityName))
+    .then(value => {
+        imageURL = value;
+        allAPIData = {
+            imageURL: imageURL,
+            cityName: inputCityName,
+            departureTime: departureTime,
+            travelSummary: travelSummary,
+            cityTemp: cityTemp,
+            durationDays: durationDays
+        };
+        console.log(allAPIData);
+    });
 });
 
 // designates what port the app will listen to for incoming requests
