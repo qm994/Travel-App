@@ -2,8 +2,9 @@ import{ openForm } from "./js/addTrip";
 import "./styles/style.scss";
 import "./styles/formStyle.scss";
 import "./styles/sideBarStyle.scss";
+import "./styles/travelCards.scss";
+import updateUI from "./js/updateUI";
 var tools = require("./js/geoNames");
-
 const submitButton = document.getElementById("inputsSubmit");
 
 submitButton.addEventListener("click", async () => {
@@ -21,12 +22,12 @@ submitButton.addEventListener("click", async () => {
         userCurrentTime: currentTime,
         departureTime: departTime,
         durationDays: parseInt((returnTime - departTime)/3600*24),
-        decideFuture: parseInt((departTime-currentTime)/3600*24)
+        decideFuture: parseInt((departTime - currentTime)/3600*24)
     };
 
     tools.postFormData("http://localhost:3030/coords", postInputs)
+    .then(data => updateUI());
 });
-//alert("the entry point is running!!!!");
 
 // export to the client library
 export {
