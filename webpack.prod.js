@@ -7,7 +7,8 @@ const WorkboxPlugin = require('workbox-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 module.exports = {
     // after set the entry 
-    entry: './src/client/index.js',
+    entry: ['babel-polyfill', './src/client/index.js'],
+    stats: 'verbose',
     mode: "production",
     output: {
         libraryTarget: "var",
