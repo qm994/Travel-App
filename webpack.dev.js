@@ -2,6 +2,7 @@ const path = require("path");
 const webpack = require('webpack');
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+//const WorkboxPlugin = require('workbox-webpack-plugin');
 
 //Most of the plugins need to be required at the top of config file
 // Then add plugin to the module.exports
