@@ -6,8 +6,15 @@
     justify-content: space-evenly;
 }
 
-// .nav {
-//     display: block;
-//     grid-area: nav;
-//     border: 1px solid red;
-// }
+input[type="date"]:hover{
+    color: red;
+};
+input[type="text"]:hover{
+    color: green;
+};
+
+button#inputsSubmit:active{
+    background-color: #333;
+    border-color: #333;
+    color: #eee;
+}
