@@ -10,7 +10,16 @@ async function updateUI (){
         <p>Your trip to ${result.cityName} will be lasting ${result.durationDays}</p>
         <p>Be notice!!! The temperature in ${result.cityName} will be ${result.cityTemp}</p>
         <p>Be notice!!! ${result.travelSummary} in ${result.cityName} at that time!!!</p>
-        `
+        `;
+        
+        document.getElementById("image-area").innerHTML = `
+        <figure>
+            <img src="${result.imageURL}" id="city-image" width=100%>
+            <figcaption>The ${result.cityName}</figcaption>
+         </figure>
+        `;
+        //document.getElementById("city-image").width = "380px";
+
     } catch(error){
         console.log(`The error happened in UpdateUI is ${error}`);
     }
