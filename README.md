@@ -1,6 +1,11 @@
 # Travel-App
 
 ### Please ignore the three buttons at the top; And use the buttons in the sideBar;
+### The confusions and difficulities I have met so far?(KEEPING UPDATED!!!)
+#### 1. The classic `regeneratorRuntime is not defined`
+Caused Reasons: 
+(1) Not set up the `@babel/plugin-transform-runtime` and used the wrong vesion at first(should use @7.7.6)
+(2) Both `@babel/plugin-transform-runtime` and `regenerator-runtime` should install in `Dependencies` rather than the development one.
 
 ### Where is my api keys and username? How do u add your keys?
 

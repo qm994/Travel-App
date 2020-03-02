@@ -4,11 +4,6 @@ const HtmlWebPackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 //const WorkboxPlugin = require('workbox-webpack-plugin');
 
-//Most of the plugins need to be required at the top of config file
-// Then add plugin to the module.exports
-
-
-
 module.exports = {
     // babel-polyfill always needed when use the async function at the top of layer;
     entry: ['babel-polyfill', './src/client/index.js'],

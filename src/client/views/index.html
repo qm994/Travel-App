@@ -42,6 +42,9 @@
           <div class="city-form">
             <label for="destinationCity">Destination:</label>
             <input type="text" name="destinationCity" id="destinationCity">
+
+            <label for="increaseCity">More Than One Destination?</label>
+            <input type="button" name="increaseCity" id="increaseCity" value="+">
           </div>
 
           <div class="button">
@@ -80,12 +83,12 @@
 
     <script>
       // Check that service workers are supported
-      if ('serviceWorker' in navigator) {
-          // Use the window load event to keep the page load performant
-          window.addEventListener('load', () => {
-              navigator.serviceWorker.register('/service-worker.js');
-          });
-      }
+      // if ('serviceWorker' in navigator) {
+      //     // Use the window load event to keep the page load performant
+      //     window.addEventListener('load', () => {
+      //         navigator.serviceWorker.register('/service-worker.js');
+      //     });
+      // }
   </script>
 
 </body>
