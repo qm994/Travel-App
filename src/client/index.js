@@ -1,4 +1,5 @@
 import{ openForm } from "./js/addTrip";
+import {addCity} from "./js/addDestination";
 import "./styles/style.scss";
 import "./styles/formStyle.scss";
 import "./styles/sideBarStyle.scss";
@@ -31,5 +32,6 @@ submitButton.addEventListener("click", async () => {
 
 // export to the client library
 export {
-    openForm
+    openForm,
+    addCity
 };
