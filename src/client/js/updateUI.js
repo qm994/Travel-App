@@ -5,8 +5,9 @@ async function updateUI (){
     try{
         const result = await res.json();
         //console.log(`The api data is ${result}`);
+
         document.getElementById("text-area").innerHTML = `
-        <p>Your trip to ${result.cityName} will be starting in ${result.decideFuture}</p>
+        <p>Your trip to ${result.cityName} will be starting in ${result.decideFuture} hours</p>
         <p>Your trip to ${result.cityName} will be lasting ${result.durationDays}</p>
         <p>Be notice!!! The temperature in ${result.cityName} will be ${result.cityTemp}</p>
         <p>Be notice!!! ${result.travelSummary} in ${result.cityName} at that time!!!</p>
