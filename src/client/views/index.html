@@ -42,9 +42,11 @@
           <div class="city-form">
             <label for="destinationCity">Destination:</label>
             <input type="text" name="destinationCity" id="destinationCity">
+          </div>
 
-            <label for="increaseCity">More Than One Destination?</label>
-            <input type="button" name="increaseCity" id="increaseCity" value="+">
+          <div class="plusLabel">
+            <label for="increaseCity">+</label>
+            <input type="button" name="increaseCity" id="increaseCity" value="+" onclick="Client.addCity()">
           </div>
 
           <div class="button">
@@ -56,9 +58,12 @@
         <!-- 3. MAIN   -->
         <!--           -->
         <div class="main">
+          <div id="travelCard">
+            <!-- <div id="image-area"></div>
+            <div id="text-area"></div> -->
+          </div>
+          
 
-          <div id="image-area"></div>
-          <div id="text-area"></div>
           <!-- popup form when add new trip-->
           
           <div class="form-popup" id="myForm">
